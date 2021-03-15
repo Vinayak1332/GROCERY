@@ -49,62 +49,7 @@
           </nav>
 
           <div>
-            <div class="btn-group" style="margin-left: 100px;">
-              <a type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="gStaple.jpg"><br>
-                Staples
-                <span class="glyphicon glyphicon-chevron-down"></span>
-                </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Dals & Pulses</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Ghee & Oils</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Atta & Flour</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Masala & Spices</a>
-              </div>
-            </div>
-          
-            <div class="btn-group" aria-labelledby="navbarDropdown">
-              <a type="hover" style="margin-left: 100px" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="snacks.jpg"><br>
-                Snacks & Beverages
-                <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Pulses</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Oils</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Flour</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Spices</a>
-              </div>
-            </div>
-
-            <div class="btn-group" aria-labelledby="navbarDropdown">
-              <a type="hover" style="margin-left: 100px" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="packed.jpg"><br>
-                Packaged Food
-                <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Pulses</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Oils</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Flour</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Spices</a>
-              </div>
-            </div>
-
-            <div class="btn-group" aria-labelledby="navbarDropdown">
-              <a type="hover" style="margin-left: 100px" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="dairy.jpg"><br>
-                Dairy & Eggs
-                <span class="glyphicon glyphicon-chevron-down"></span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Pulses</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Oils</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Flour</a>
-                <a class="dropdown-item" data-toggle="tooltip" data-placement="bottom" href="#">Spices</a>
-              </div>
-            </div>
-         
+                  
            <div> 
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
@@ -127,8 +72,54 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
-            <div class="row row-cols-3" id="vinayak">
-          </div>  
+                  
+            
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="d-flex mx-2 flex-row bd-highlight mb-3">
+                    <!-- Filters -->
+                    <div class="p-2 bd-highlight">
+                      <label for="Filter" class="px-3"><strong>Filters</strong></label><br>
+                      <label for="Brands" class="pt-2"><strong>Brands</strong></label>
+                      <!-- First checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input brand" type="checkbox" value="Good Life" id="flexCheckDefault"/>
+                        <label class="form-check-label " for="flexCheckDefault">Good Life</label>
+                      </div>
+                      <!-- Second checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input brand" type="checkbox" value="Saffola" id="flexCheckChecked" />
+                        <label class="form-check-label" for="flexCheckChecked">Saffola</label>
+                      </div>
+                      <!-- Third checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input brand" type="checkbox" value="Tata" id="flexCheckChecked"/>
+                        <label class="form-check-label" for="flexCheckChecked">Tata</label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input brand" type="checkbox" value="Fortune" id="flexCheckChecked"/>
+                        <label class="form-check-label" for="flexCheckChecked">Fortune</label>
+                      </div>
+                      <!-- Lense checkbox -->
+                      <div class="form-check">
+                        
+                        <button class="btn btn-success" onclick="applyFilters()">Apply Filter</button>
+                      </div>
+                      </div>
+                      </div>
+                </div>
+                  <!--display the items-->
+                <div class="col-sm-10">
+                   <div class="d-flex flex-wrap col-md-12" id="vinayak" >
+            
+                   </div>
+                </div>
+                
+              </div>
+            </div>
+
 
       <!-- Footer section -->
     <footer class="bg-light text-center text-white" style="margin: left 0;">

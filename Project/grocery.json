@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name":"Good Life Moong Dal 500g",
+        "brand":"Good Life",
         "price":599,
         "seller":"G-Mart",
         "rating":"1",
@@ -9,7 +10,8 @@
     },
     {
         "id": 2,
-        "name":"Brahmins Rice Powder 500g",
+        "name":"Brahmins Rice Powder (GL)",
+        "brand":"Good Life",
         "price":109.74,
         "seller":"G-Mart",
         "rating":"4",
@@ -17,7 +19,8 @@
     },
     {
         "id": 3,
-        "name":"Saffola Gold Pro Healthy Lifestyle Rice Bran Based Blended Oil 5 L",
+        "name":"Saffola Gold Pro Healthy",
+        "brand":"Saffola",
         "price":879,
         "seller":"G-Mart",
         "rating":"2",
@@ -25,8 +28,9 @@
     },
     {
         "id": 4,
-        "name":"Tata Lite Free Flow Iodised Salt 1 kg",
+        "name":"Tata Lite Iodised Salt 1 kg",
         "price":35,
+        "brand":"Tata",
         "seller":"G-Mart",
         "rating":"1",
         "image":"p3.jpg"
@@ -35,6 +39,7 @@
         "id": 5,
         "name":"Chakki Atta 10 kg",
         "price":289,
+        "brand":"Fortune",
         "seller":"G-Mart",
         "rating":"1",
         "image":"p4.jpg"

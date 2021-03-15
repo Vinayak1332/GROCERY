@@ -1,9 +1,11 @@
+var data;
 fetch("grocery.json")
 .then((response)=>{
     return response.json();
 })
-.then((data)=>{
-    console.log(data);
+.then((mydata)=>{
+    console.log(mydata);
+    data=mydata;
     appendData(data);
 })
 
@@ -36,4 +38,77 @@ function setId(id){
     window.document.location="landing.html"+"?id="+id;
 }
 
-var noti = document.querySelector
+function applyFilters(){
+    let b=document.getElementsByClassName("brand");
+    let brandArray=[];
+    let brandListingArray=[];
+  let mainArray=[];
+  let listingArray=[];
+    
+
+  for(let x of b){
+      if(x.checked){ 
+          brandArray.push(x.value);
+      }
+  }
+  console.log(brandArray)
+  if(brandArray.length!==0){
+      for(let i=0;i<brandArray.length;i++){
+          for(let j=0;j<data.length;j++){
+              if(brandArray[i]===data[j].brand){
+                  brandListingArray.push(data[j].id);
+              }
+          }
+      } 
+      console.log(brandListingArray);
+  }
+
+  
+  
+  let temp=0;
+
+  if (brandListingArray.length !== 0) {
+      for(let i=0;i<brandListingArray.length;i++){
+                  for(let k=0;k<mainArray.length;k++){
+                      if(mainArray[k]===brandListingArray[i]){
+                          temp++;
+                      }
+                  }
+                  if(temp===0){
+                      mainArray.push(brandListingArray[i]);
+                  }
+              }
+          }
+  
+  else if(brandListingArray.length!==0){
+      for(let i=0;i<brandListingArray.length;i++){
+          mainArray.push(brandListingArray[i]);
+      }
+  }
+  
+  console.log(mainArray);
+
+  for(let i=0;i<mainArray.length;i++){
+      let elem=data.find((e)=>{
+          if(mainArray[i]===e.id){
+              return true;
+          }
+      })
+      listingArray.push(elem);
+  }
+  console.log(listingArray);
+  document.getElementById("vinayak").innerHTML=""; 
+  appendData(listingArray);
+  if(listingArray.length===0){
+      if(brandListingArray.length!==0){
+      let res=document.getElementById("mainId");
+      res.innerHTML="Product Not Found";
+      res.style.color="red";
+      res.style.fontWeight="bolder";
+      res.style.fontSize="20px";
+      }
+      else{
+          appendData(data);
+      }
+  }
+}
