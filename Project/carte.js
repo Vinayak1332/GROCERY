@@ -41,7 +41,7 @@ fetch('grocery.json')
                 <div class="d-flex flex-column">
                     <center><h4>${data[i].name}</h4><center>
                     <h5>Price-${data[i].price} Rs</h5>
-                    <button type="button" class="btn-outline-danger" style="width:50%" onclick=removeItem(${data[i].id})>Remove</button>
+                    <button class="btn-outline" style="width:50%" onclick=removeItem(${data[i].id})>Remove</button>
                 </div>
                 <br>  
             </div>
